@@ -11,7 +11,7 @@
         android:layout_width="@dimen/_15sdp"
         android:layout_height="@dimen/_15sdp"
         app:srcCompat="@drawable/ic_home"
-        app:tint="#40445A" />
+        app:tint="@color/icon_color_default" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvTabName"
