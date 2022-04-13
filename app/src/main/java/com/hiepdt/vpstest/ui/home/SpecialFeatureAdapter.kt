@@ -10,8 +10,8 @@ import com.hiepdt.vpstest.models.SpecialFeatureModel
 import kotlinx.android.synthetic.main.item_special_feature.view.*
 
 class SpecialFeatureAdapter(
-    private val context: Context,
-    private val dataList: ArrayList<SpecialFeatureModel>?
+    private val context: Context?,
+    private val dataList: List<SpecialFeatureModel>?
 ) : RecyclerView.Adapter<SpecialFeatureAdapter.MyHolder>() {
 
 
@@ -29,20 +29,11 @@ class SpecialFeatureAdapter(
         return dataList?.size ?: 0
     }
 
-    fun setData(list: ArrayList<SpecialFeatureModel>?) {
-        if (list == null || list.isEmpty()) {
-            return
-        }
-        this.dataList?.clear()
-        this.dataList?.addAll(list)
-        notifyDataSetChanged()
-    }
-
     class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(model: SpecialFeatureModel?) {
             itemView.apply {
                 if (model == null) return
-                model.background?.let { lnContainer?.setBackgroundResource(it) }
+                model.background?.let { imgBackground?.setImageResource(it) }
                 model.icon?.let { imgIcon?.setImageResource(it) }
                 tvFeatureName?.text = model.featureName
             }

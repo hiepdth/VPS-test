@@ -6,19 +6,22 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_register_service_item"
-        android:orientation="vertical">
+        app:cardBackgroundColor="#F6F6F6"
+        app:cardCornerRadius="@dimen/_12sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:cardUseCompatPadding="true">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imgIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_37sdp"
+            android:layout_height="@dimen/_37sdp"
+            android:scaleType="fitCenter"
             android:padding="@dimen/_10sdp"
             app:srcCompat="@drawable/ic_chart" />
-    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvServiceName"
@@ -26,6 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_3sdp"
-        android:textColor="#333333"
-        android:text="Item" />
+        android:gravity="center"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="#333333" />
 </LinearLayout>

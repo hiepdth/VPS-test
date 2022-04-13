@@ -10,8 +10,8 @@ import com.hiepdt.vpstest.models.RegisterServiceModel
 import kotlinx.android.synthetic.main.item_register_service.view.*
 
 class RegisterServiceAdapter(
-    private val context: Context,
-    private val dataList: ArrayList<RegisterServiceModel>?
+    private val context: Context?,
+    private val dataList: List<RegisterServiceModel>?
 ) : RecyclerView.Adapter<RegisterServiceAdapter.MyHolder>() {
 
 

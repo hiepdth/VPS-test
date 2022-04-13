@@ -75,9 +75,6 @@ class CommonUtils {
             return String(buffer, Charset.forName("UTF-8"))
         }
 
-        val timeStamp: String
-            get() = SimpleDateFormat(AppConstants.TIMESTAMP_FORMAT, Locale.US).format(Date())
-
         fun isValidPhoneNumber(phoneNumber: String?): Boolean {
             if (TextUtils.isEmpty(phoneNumber)) {
                 return false

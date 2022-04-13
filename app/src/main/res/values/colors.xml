@@ -10,11 +10,18 @@
 
     <color name="start_color">#C10C2B</color>
     <color name="end_color">#C10C2B</color>
+
     <color name="transparent">#00000000</color>
+    <color name="transparent_20">#20000000</color>
 
     <color name="color_success">#8BD8BD</color>
     <color name="color_text_success">#243665</color>
     <color name="color_failed">#CC313D</color>
     <color name="color_text_failed">#FBE0E4</color>
     <color name="color_failed_50">#50CC313D</color>
+
+    <color name="gray">#cccccc</color>
+
+    <color name="icon_color_default">#D6D6D6</color>
+    <color name="icon_color_selected">#40445A</color>
 </resources>

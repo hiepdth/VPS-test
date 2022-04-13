@@ -19,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.hiepdt.vpstest.R;
 import com.hiepdt.vpstest.utils.CommonUtils;
 import com.hiepdt.vpstest.utils.NetworkUtils;
+import com.hiepdt.vpstest.utils.ScreenUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,6 +37,9 @@ public abstract class BaseActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
 //        requestWindowFeature(Window.FEATURE_NO_TITLE);
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        ScreenUtils.initStatusBar(this);
+        ScreenUtils.initMarginTopToolbar(this, false);
+        ScreenUtils.initToolbar(this);
     }
 
     @Override

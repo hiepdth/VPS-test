@@ -12,19 +12,35 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgIcon"
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_stock" />
+            app:cardCornerRadius="@dimen/_15sdp"
+            app:cardElevation="@dimen/_3sdp"
+            app:cardUseCompatPadding="true"
+            app:contentPaddingBottom="@dimen/_10sdp"
+            app:contentPaddingLeft="@dimen/_12sdp"
+            app:contentPaddingRight="@dimen/_12sdp"
+            app:contentPaddingTop="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgIcon"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_stock" />
+        </com.google.android.material.card.MaterialCardView>
+
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvServiceName"
             style="@style/TextAppearanceSemiBold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:ellipsize="end"
             android:gravity="center"
-            android:textColor="#333333"
-            android:text="Item" />
+            android:maxLines="2"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="#333333" />
     </LinearLayout>
 </LinearLayout>

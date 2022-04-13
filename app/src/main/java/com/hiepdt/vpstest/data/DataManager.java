@@ -15,10 +15,18 @@
 
 package com.hiepdt.vpstest.data;
 
+import com.hiepdt.vpstest.models.ServiceItemModel;
+
+import java.util.List;
+
 /**
  * Created by hiepdt on 12/04/2022
  */
 
 public interface DataManager {
+    List<ServiceItemModel> getServiceList();
+
+    void setServiceList(List<ServiceItemModel> models);
+
     void clearCache();
 }

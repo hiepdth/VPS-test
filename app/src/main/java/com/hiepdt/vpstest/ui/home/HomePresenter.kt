@@ -1,7 +1,7 @@
 package com.hiepdt.vpstest.ui.home
 
-import com.hiepdt.vpstest.base.MvpView
-
-interface HomePresenter<V : MvpView>  {
-
+interface HomePresenter<V : HomeView>  {
+    fun getServiceList()
+    fun getFeatureList()
+    fun getRegisterServiceList()
 }

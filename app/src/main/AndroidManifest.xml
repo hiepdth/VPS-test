@@ -3,6 +3,7 @@
     package="com.hiepdt.vpstest">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:name=".GlobalApp"
         android:allowBackup="true"
@@ -13,8 +14,7 @@
         android:largeHeap="true"
         android:theme="@style/AppTheme">
         <activity
-            android:screenOrientation="portrait"
-            android:name=".ui.home.HomeActivity">
+            android:name=".ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

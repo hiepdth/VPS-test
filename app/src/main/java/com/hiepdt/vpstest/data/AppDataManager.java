@@ -20,6 +20,9 @@ import android.content.Context;
 
 import com.hiepdt.vpstest.data.prefs.AppPreferencesHelper;
 import com.hiepdt.vpstest.data.prefs.PreferencesHelper;
+import com.hiepdt.vpstest.models.ServiceItemModel;
+
+import java.util.List;
 
 /**
  * Created by hiepdt on 12/04/2022
@@ -32,9 +35,19 @@ public class AppDataManager implements DataManager {
     private final Context mContext;
     private final PreferencesHelper mPreferencesHelper;
 
-    public AppDataManager( Context context) {
+    public AppDataManager(Context context) {
         mContext = context;
         mPreferencesHelper = new AppPreferencesHelper(context);
+    }
+
+    @Override
+    public List<ServiceItemModel> getServiceList() {
+        return mPreferencesHelper.getServiceList();
+    }
+
+    @Override
+    public void setServiceList(List<ServiceItemModel> models) {
+        mPreferencesHelper.setServiceList(models);
     }
 
     @Override

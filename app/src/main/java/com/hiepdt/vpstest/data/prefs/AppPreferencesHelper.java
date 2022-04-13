@@ -17,14 +17,23 @@ package com.hiepdt.vpstest.data.prefs;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.text.TextUtils;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.hiepdt.vpstest.models.ServiceItemModel;
 import com.hiepdt.vpstest.utils.AppConstants;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by hiepdt on 12/04/2022
  */
 
 public class AppPreferencesHelper implements PreferencesHelper {
-    private static final String PREF_KEY_ACCESS_TOKEN = "PREF_KEY_ACCESS_TOKEN";
+    private Gson gson = new Gson();
+    private static final String PREF_KEY_SERVICE_LIST = "PREF_KEY_SERVICE_LIST";
 
     private final SharedPreferences mPrefs;
 
@@ -33,7 +42,24 @@ public class AppPreferencesHelper implements PreferencesHelper {
     }
 
     @Override
+    public List<ServiceItemModel> getServiceList() {
+        String json = mPrefs.getString(PREF_KEY_SERVICE_LIST, "");
+        if (TextUtils.isEmpty(json)) return new ArrayList<>();
+        return gson.fromJson(json, new TypeToken<List<ServiceItemModel>>() {
+        }.getType());
+    }
+
+    @Override
+    public void setServiceList(List<ServiceItemModel> models) {
+        String json = "";
+        if (models != null) {
+            json = gson.toJson(models);
+        }
+        mPrefs.edit().putString(PREF_KEY_SERVICE_LIST, json).apply();
+    }
+
+    @Override
     public void clearCache() {
-        mPrefs.edit().remove(PREF_KEY_ACCESS_TOKEN).apply();
+        mPrefs.edit().remove(PREF_KEY_SERVICE_LIST).apply();
     }
 }

@@ -15,11 +15,20 @@
 
 package com.hiepdt.vpstest.data.prefs;
 
+import com.hiepdt.vpstest.models.ServiceItemModel;
+
+import java.util.List;
+
 /**
  * Created by hiepdt on 12/04/2022
  */
 
 public interface PreferencesHelper {
+
+    List<ServiceItemModel> getServiceList();
+
+    void setServiceList(List<ServiceItemModel> models);
+
     void clearCache();
 
 }
