@@ -86,10 +86,12 @@ class MainActivity : BaseActivity() {
                 commonPagerTitleView.onPagerTitleChangeListener = object : OnPagerTitleChangeListener {
                     override fun onSelected(index: Int, totalCount: Int) {
                         titleText.visibility = View.VISIBLE
+                        titleImg.setColorFilter(ContextCompat.getColor(context, R.color.icon_color_selected))
                     }
 
                     override fun onDeselected(index: Int, totalCount: Int) {
                         titleText.visibility = View.GONE
+                        titleImg.setColorFilter(ContextCompat.getColor(context, R.color.icon_color_default))
                     }
 
                     override fun onLeave(index: Int, totalCount: Int, leavePercent: Float, leftToRight: Boolean) {
