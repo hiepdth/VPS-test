@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.hiepdt.vpstest.R
 import com.hiepdt.vpstest.base.BaseActivity
